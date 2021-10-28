@@ -1,0 +1,74 @@
+.header {
+  background-color: $color-background-1;
+  display: flex;
+  align-items: center;
+  width: $width-100;
+  position: fixed;
+  top: 0;
+
+  &__logo-container {
+    width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  &__logo {
+    max-width: 80%;
+  }
+
+  &__nav-bar {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav-bar--res {
+    display: none;
+    background-color: $color-background-1;
+    position: absolute;
+    top: 4.3rem;
+    left: 0;
+    width: $width-100;
+    padding-bottom: 1rem;
+  }
+
+  &__nav-bar-item {
+    @include transition-ease;
+    color: $color-text-1;
+    font-size: inherit;
+    text-decoration: none;
+    padding: 1.5rem 0.6rem;
+    display: inline-block;
+
+    &:hover {
+      background-color: $color-background-2;
+      color: $color-text-3;
+    }
+  }
+
+  &__btn-container {
+    padding: 0 1.2rem;
+  }
+
+  &__btn-signup {
+    @include btn($color-background-btn-1, $color-background-btn-1-hover, none);
+    @include transition-ease;
+    width: 9rem;
+  }
+
+  &__btn-hamburger {
+    @include transition-ease;
+    color: $color-text-1;
+    font-size: 2.1rem;
+    cursor: pointer;
+    display: none;
+    padding-right: 0.7rem;
+
+    &:hover {
+      color: $color-text-2;
+    }
+  }
+}

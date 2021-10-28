@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&family=Oswald:wght@200;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+
+    <!-- jquery cdn -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- javascript -->
+    <script defer src="js/script.js"></script>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/main.css" />
+    <title>xemphim.fun</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__logo-container">
+        <img src="img/logo-full.png" alt="Logo Xem Phim" class="header__logo" />
+      </div>
+
+      <nav class="header__nav-bar">
+        <div class="header__nav-bar-container">
+          <a href="#" class="header__nav-bar-item"
+            ><i class="fas fa-search"></i>Tìm kiếm</a
+          >
+          <a href="#" class="header__nav-bar-item">Phim Lẻ</a>
+          <a href="#" class="header__nav-bar-item">Phim Bộ</a>
+          <a href="#" class="header__nav-bar-item">Tất cả phim</a>
+          <a href="#" class="header__nav-bar-item">FAQ</a>
+        </div>
+
+        <div class="header__btn-container">
+          <button class="header__btn-signup">Đăng nhập</button>
+        </div>
+      </nav>
+
+      <div class="header__btn-hamburger">
+        <i class="fa fa-bars" onclick="toggleNavBar(event)"></i>
+      </div>
+    </header>
+
+    <!-- SECTION FILTERS -->
+    <section class="filters-container">
+      <!-- Genre -->
+      <div class="filter">
+        <label for="genres" class="filter__label">Thể loại:</label>
+        <select
+          name="genres"
+          class="filter__drop-down filter__drop-down--genres"
+          onchange="filterMoviesFromDropDownMenu('genre')"
+        >
+          <option class="filter__drop-down-item" value="">- Tất cả -</option>
+        </select>
+      </div>
+
+      <!-- Country -->
+      <div class="filter">
+        <label for="countries" class="filter__label">Quốc gia:</label>
+        <select
+          name="countries"
+          class="filter__drop-down filter__drop-down--countries"
+          onchange="filterMoviesFromDropDownMenu('country')"
+        >
+          <option class="filter__drop-down-item" value="">- Tất cả -</option>
+        </select>
+      </div>
+
+      <!-- Year -->
+      <div class="filter">
+        <label for="countries" class="filter__label">Năm:</label>
+        <select
+          name="years"
+          class="filter__drop-down filter__drop-down--years"
+          onchange="filterMoviesFromDropDownMenu('year')"
+        >
+          <option class="filter__drop-down-item" value="">- Tất cả -</option>
+        </select>
+      </div>
+
+      <!-- Sorting -->
+      <div class="filter">
+        <label for="sorting" class="filter__label">Sắp xếp:</label>
+        <select
+          name="sorting"
+          class="filter__drop-down filter__drop-down--sorting"
+          onchange="filterMoviesFromDropDownMenu('sorting')"
+        >
+          <option class="filter__drop-down-item" value="">- Tất cả -</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- SECTION HOME PAGE MOVIES -->
+    <!-- Nominated Movies -->
+    <section class="home-page-movies">
+      <div class="nominated-movies">
+        <h2 class="nominated-movies__header">Phim đề cử</h2>
+        <div class="nominated-movies__container"></div>
+      </div>
+
+      <!-- Trending Movies -->
+      <div class="trending-movies">
+        <h2 class="trending-movies__header">Phim lẻ mới cập nhật</h2>
+        <div class="trending-movies__container"></div>
+      </div>
+    </section>
+
+    <!-- SECTION FILTERED MOVIES -->
+    <section class="filtered-movies">
+      <!-- Movies Container -->
+      <div class="filtered-movies__container"></div>
+
+      <!-- Pagination -->
+      <div class="btn-container">
+        <div class="btn-container__btn-box-numbers"></div>
+        <div class="btn-container__btn-box-pre-next"></div>
+      </div>
+    </section>
+  </body>
+</html>

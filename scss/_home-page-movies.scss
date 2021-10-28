@@ -1,0 +1,58 @@
+.home-page-movies {
+  @include wrapper;
+  margin: 0 auto 1rem;
+  padding: 0 0.5rem;
+}
+
+.nominated-movies,
+.trending-movies {
+  &__header {
+    color: $color-title;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-bottom: 1px solid $color-border;
+    padding-bottom: 0.3rem;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.nominated-movies {
+  .movie-box {
+    &:nth-child(6),
+    &:nth-child(7),
+    &:nth-child(8),
+    &:nth-child(9),
+    &:nth-child(10) {
+      display: none;
+    }
+  }
+}
+
+.movie-box {
+  padding: 0.5rem 0.5rem 1.5rem;
+  cursor: pointer;
+
+  &__img {
+    width: 100%;
+
+    &[alt] {
+      color: $color-text-3;
+      font-style: italic;
+    }
+  }
+
+  &__title--vn {
+    color: $color-text-3;
+    margin: 0.4rem 0;
+  }
+
+  &__title--en {
+    color: $color-text-2;
+  }
+}

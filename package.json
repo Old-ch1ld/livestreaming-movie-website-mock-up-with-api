@@ -1,0 +1,12 @@
+{
+  "name": "xemphim",
+  "version": "1.0.0",
+  "description": "A mock-up movie-watching website created from The Movies DB API (https://www.themoviedb.org/) based on XEMPHIM interface",
+  "main": "/dist/js/script.js",
+  "scripts": {},
+  "author": "Son Vu",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.42.1"
+  }
+}

@@ -1,0 +1,32 @@
+.filters-container {
+  @include wrapper;
+  background-color: $color-background-2;
+  color: $color-text-1;
+  display: flex;
+  margin: 0 auto 2rem;
+  padding: 1rem 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 22%;
+  padding: 0 1.3rem;
+  font-family: inherit;
+
+  &__label {
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  &__drop-down {
+    padding: 0.5rem;
+    font-size: inherit;
+    cursor: pointer;
+    font-family: inherit;
+    outline: none;
+  }
+}

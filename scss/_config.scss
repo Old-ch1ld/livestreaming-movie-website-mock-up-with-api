@@ -1,0 +1,74 @@
+////////// VARIABLES
+$color-background-1: #06121e;
+$color-background-2: #0e274073;
+$color-background-3: #0c233a;
+$color-background-btn-1: #cf2122;
+$color-background-btn-1-hover: #941818;
+$color-border: #1b3c5d;
+$color-text-1: #ffffff;
+$color-text-2: #7a7a7a;
+$color-text-3: #dbdbdb;
+$color-title: #b1a21e;
+$width-100: 100%;
+$width-90: 90%;
+
+////////// MIXINS
+@mixin wrapper {
+  width: $width-90;
+  max-width: 94rem;
+
+  @include screen-1200 {
+    width: $width-100;
+  }
+}
+
+@mixin btnStates($color, $color-hover) {
+  background-color: $color;
+
+  &:hover {
+    background-color: $color-hover;
+  }
+}
+
+@mixin btn($color, $color-hover, $border) {
+  color: $color-text-1;
+  padding: 0.7rem 0;
+  font-family: inherit;
+  font-size: inherit;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  border: $border;
+  @include transition-ease;
+  @include btnStates($color, $color-hover);
+}
+
+@mixin screen-1200 {
+  @media only screen and (max-width: 75rem) {
+    @content;
+  }
+}
+
+@mixin screen-864 {
+  @media only screen and (max-width: 54rem) {
+    @content;
+  }
+}
+
+@mixin screen-576 {
+  @media only screen and (max-width: 36rem) {
+    @content;
+  }
+}
+
+@mixin transition-ease {
+  transition: all 0.4s ease;
+}
+
+////////// RESET
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

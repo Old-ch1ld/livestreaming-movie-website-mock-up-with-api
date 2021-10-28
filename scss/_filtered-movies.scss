@@ -1,0 +1,47 @@
+.filtered-movies {
+  @include wrapper;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+
+  &__btn--num {
+    @include btn(
+      $color-background-1,
+      $color-background-2,
+      1px solid $color-text-1
+    );
+    min-width: 2.7rem;
+    padding: 0.7rem 0.5rem;
+    margin: 0 0.2rem;
+    transition: all 0.2s ease;
+  }
+
+  &__dots {
+    color: $color-text-1;
+    margin: 0 0.7rem;
+  }
+
+  &__btn--previous,
+  &__btn--next {
+    @include btn(
+      $color-background-1,
+      $color-background-2,
+      1px solid $color-text-1
+    );
+    width: 9rem;
+  }
+}
+
+.js-active {
+  border: none;
+  background-color: $color-background-3;
+}
